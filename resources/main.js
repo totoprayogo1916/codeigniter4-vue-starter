@@ -8,4 +8,18 @@ const router = createRouter({
   routes,
 });
 
+// ambil title dari komponen aktif
+router.afterEach((to) => {
+  const nearestWithTitle = to.matched
+    .slice()
+    .reverse()
+    .find((r) => r.components?.default?.title);
+
+  if (nearestWithTitle) {
+    document.title = `${nearestWithTitle.components.default.title} | My App`;
+  } else {
+    document.title = "My App";
+  }
+});
+
 createApp(App).use(router).mount("#app");

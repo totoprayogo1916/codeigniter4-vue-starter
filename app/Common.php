@@ -16,20 +16,32 @@
 
 function vite(string $filename, string $type = ''): string|array|null
 {
+    $devServer = 'http://localhost:' . getenv('VITE_PORT'); // sesuaikan dengan vite.config.js
     $manifestPath = FCPATH . '.vite/manifest.json';
 
+    // 1. Cek apakah dev server jalan
+    if (@fopen($devServer . '/@vite/client', 'r')) {
+        // Kalau HMR aktif
+        if ($type === 'js') {
+            return <<<HTML
+                <script type="module" src="{$devServer}/@vite/client"></script>
+                <script type="module" src="{$devServer}/$filename"></script>
+            HTML;
+        }
+        return null; // CSS di dev diinject otomatis oleh Vite
+    }
+
+    // 2. Kalau dev server tidak ada → fallback ke manifest.json
     if (!file_exists($manifestPath)) {
         return null;
     }
 
     $manifest = json_decode(file_get_contents($manifestPath), true);
-
     if (!isset($manifest[$filename])) {
         return null;
     }
 
     $entry = $manifest[$filename];
-
     $result = [];
 
     // Ambil JS
@@ -41,10 +53,9 @@ function vite(string $filename, string $type = ''): string|array|null
     if (isset($entry['css']) && is_array($entry['css'])) {
         $result['css'] = array_map(fn($css) => '/' . ltrim($css, '/'), $entry['css']);
     } else {
-        $result['css'] = []; // selalu array
+        $result['css'] = [];
     }
 
-    // Jika type ditentukan, kembalikan langsung script/link tag
     if ($type === 'js' && isset($result['js'])) {
         return '<script type="module" src="'.base_url($result['js']).'"></script>';
     }
@@ -57,9 +68,8 @@ function vite(string $filename, string $type = ''): string|array|null
             }
             return $tags;
         }
-        return ''; // kalau css kosong, kembalikan string kosong
+        return '';
     }
 
-    // default: return array
     return $result ?: null;
 }
