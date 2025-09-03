@@ -1,0 +1,11 @@
+{
+  "resources/main.js": {
+    "file": "build/main-D4StN1_e.js",
+    "name": "main",
+    "src": "resources/main.js",
+    "isEntry": true,
+    "css": [
+      "build/main-c_8cn-1P.css"
+    ]
+  }
+}

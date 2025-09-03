@@ -12,6 +12,7 @@ export default defineConfig(() => {
       outDir: "./public/",
       assetsDir: env.VITE_BUILD_DIR,
       manifest: true,
+      minify: true,
       rollupOptions: {
         input: `./${env.VITE_RESOURCES_DIR}/${env.VITE_ENTRY_FILE}`,
       },

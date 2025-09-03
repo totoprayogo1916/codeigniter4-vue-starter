@@ -11,7 +11,6 @@ const count = ref(0);
         class="logo"
         alt="Codeigniter vite logo"
       />
-      <img src="@/vue.svg" class="logo" alt="Vue logo" />
     </div>
     <h2>Codeigniter Vite + Vue</h2>
     <p>
