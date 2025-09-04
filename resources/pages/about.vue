@@ -8,13 +8,9 @@
 
 <script>
 export default {
-  title: "About"
+  title: "About",
+  meta: {
+    layout: "default"
+  }
 }
 </script>
-
-<style scoped>
-.about {
-  text-align: left;
-  margin-top: 90px;
-}
-</style>

@@ -16,6 +16,9 @@
 
 <script>
 export default {
-  title: "Home"
+  title: "Home",
+  meta:{
+    layout: "default"
+  }
 }
 </script>
