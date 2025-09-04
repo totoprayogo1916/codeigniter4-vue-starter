@@ -1,6 +1,6 @@
 {
   "resources/main.js": {
-    "file": "build/main-DVRRE-De.js",
+    "file": "build/main-D3cbrYxg.js",
     "name": "main",
     "src": "resources/main.js",
     "isEntry": true,
@@ -10,11 +10,11 @@
       "resources/pages/[...all].vue"
     ],
     "css": [
-      "build/main-D3U1B0AK.css"
+      "build/main-DTjNp1z-.css"
     ]
   },
   "resources/pages/[...all].vue": {
-    "file": "build/_...all_-DGLjoD8I.js",
+    "file": "build/_...all_-BimsKc9E.js",
     "name": "_...all_",
     "src": "resources/pages/[...all].vue",
     "isDynamicEntry": true,
@@ -23,19 +23,16 @@
     ]
   },
   "resources/pages/about.vue": {
-    "file": "build/about-DGy_-5bj.js",
+    "file": "build/about-B7_uVvsU.js",
     "name": "about",
     "src": "resources/pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/main.js"
-    ],
-    "css": [
-      "build/about-CEbz-fZ5.css"
     ]
   },
   "resources/pages/login.vue": {
-    "file": "build/login-Cp45a_tV.js",
+    "file": "build/login-CMTxWcT4.js",
     "name": "login",
     "src": "resources/pages/login.vue",
     "isDynamicEntry": true,
