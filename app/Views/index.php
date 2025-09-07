@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Welcome to CodeIgniter 4!</title>
@@ -11,12 +12,13 @@
     <?= vite('resources/main.js', 'css') ?>
 
 </head>
+
 <body>
     <div id="app"></div>
 
-<!-- SCRIPTS -->
-
+    <!-- SCRIPTS -->
     <?= vite('resources/main.js', 'js') ?>
 
 </body>
+
 </html>
