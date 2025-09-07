@@ -9,5 +9,5 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('.*', function() {
     // arahkan semua route yang tidak ketemu ke index.html Vue
-    echo view('index'); // pastikan ini memuat file index.html hasil build Vite
+    return view('index'); // pastikan ini memuat file index.html hasil build Vite
 });
