@@ -1,4 +1,6 @@
 <template>
+  <!-- <Navbar /> -->
+
   <div class="main-layout">
     <aside class="sidebar">
       <router-link to="/">Home</router-link>
@@ -10,3 +12,7 @@
     </main>
   </div>
 </template>
+
+<script setup>
+// import Navbar from '@/components/Navbar.vue'
+</script>

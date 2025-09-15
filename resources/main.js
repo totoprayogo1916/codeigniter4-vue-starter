@@ -6,6 +6,8 @@ import routes from "~pages"; // Auto-generated routes
 import AuthLayout from "@/layouts/AuthLayout.vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 
+import '@/css/app.css';
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
