@@ -3,11 +3,14 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 import Pages from "vite-plugin-pages";
 
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineConfig(() => {
   const env = loadEnv(null, process.cwd());
 
   return {
     plugins: [
+      tailwindcss(),
       vue(),
       Pages({
         dirs: "resources/pages",
