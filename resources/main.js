@@ -6,6 +6,11 @@ import routes from "~pages"; // Auto-generated routes
 import AuthLayout from "@/layouts/AuthLayout.vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 
+import '@/scss/app.scss'
+
+// Import all of Bootstrap’s JS
+import * as bootstrap from 'bootstrap'
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
@@ -52,3 +57,5 @@ app.use(router);
 router.isReady().then(() => {
   app.mount("#app");
 });
+
+window.bootstrap = bootstrap
