@@ -12,7 +12,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "rimraf": "^6.0.1",
     "vite": "^7.3.1",
-    "vite-plugin-pages": "^0.33.1"
+    "vite-plugin-pages": "^0.33.2"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
